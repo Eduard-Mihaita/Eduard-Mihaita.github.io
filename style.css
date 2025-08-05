@@ -1,0 +1,39 @@
+body{
+    background-color: #9400D3;
+     font-family: "Permanent Marker", cursive;
+     font-weight: 500;
+}
+.card{
+    background-color: #B300FF;
+    text-align: center;
+    border-radius: 1em;
+    box-shadow: 0.25rem 0.25rem #520075;
+    padding: 10px;
+    margin: 25px 10px;
+    display: block;
+}
+.title{
+    font-size: 40px;
+}
+.text{
+    color: black;
+}
+.link{
+    color: white;
+}
+.highlight{
+    color: white;
+}
+li{
+    list-style-position: inside;
+}
+.zile{
+    background-color: #C02EFF;
+    box-shadow: 0.25rem 0.25rem #520075;
+    border-radius: 1rem;
+    width: 25%;
+    height: 100%;
+    padding: 5px;
+    display: inline-block;
+    margin: 10px;
+}

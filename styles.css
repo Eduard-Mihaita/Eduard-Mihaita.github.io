@@ -55,7 +55,7 @@ li{
 .container{
     display: flex;
     gap: 10px;
-    flex-direction: column;
+    flex-direction: row;
     max-width: 1200px;
     flex-flow: wrap;
     height: 1vh;
@@ -85,6 +85,6 @@ li{
 }
 @media (max-width: 768px){
     .container{
-        flex-direction: row;
+        flex-direction: column;
     }
 }

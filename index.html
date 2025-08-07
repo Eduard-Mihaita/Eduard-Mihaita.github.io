@@ -1,96 +1,119 @@
+<!doctype html>
 <html lang="ro">
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Eduard Mihaita - Learning Journey</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head>
 
 <body>
     <div class="container">
-        <div class="left-column">
-            <div class="card">
-                <img src="assets\images\eu.jpg">
-                <h1 class="title">Eduard-Mihai Mihăiță</h1>
-                <span class="text">Vârstă: 23 ani</span><br>
-                <span class="text">Oraș natal: Ploiești</span> <br>
-                <span class="text">Facultatea absolvită: Facultatea de Marketing - ASE București</span> <br>
-                <span class="text">Hobby preferat: Gaming</span> <br>
-                <span class="text">Animal preferat: Pisica</span> <br>
-            </div>
-            <div class="card">
-                <h2 class="title">Obiectivele mele:</h2>
-                <ul>
-                    <li>Luna 1: Stăpânesc HTML, CSS, JavaScript</li>
-                    <li>Luna 2: Primul meu plugin Moodle</li>
-                    <li>Luna 8: Full-stack AI Developer 🚀</li>
-                </ul>
-            </div>
-        </div>
-        <div class="right-column">
-            <div class="card">
-                <div class="project-entry">
-                    <span class="project-title">Ziua 1</span>
-                    <span class="date">04.08.2025</span>
+        <div class="row">
+            <div class="col-lg-4"> <!-- Cardurile din stanga-->
+                <div class="card p-3 mt-3">
+                    <img class="card-img-top" src="assets\images\eu.jpg">
+                    <h1 class="card-title">Eduard-Mihai Mihăiță</h1>
+                    <span class="card-text">Vârstă: 23 ani</span>
+                    <span class="card-text">Oraș natal: Ploiești</span>
+                    <span class="card-text">Facultatea absolvită: Facultatea de Marketing - ASE București</span>
+                    <span class="card-text">Hobby preferat: Gaming</span>
+                    <span class="card-text">Animal preferat: Pisica</span>
                 </div>
-                <span class="project-description">Am învățat HTML și CSS basics și am făcut primul commit! ✅</span>
-                <ul>
-                    <li>Capitolul 2 - Introduction to HTML
-                        <p class="project-title"><a class="link"
+                <div class="card p-3 mt-3">
+                    <h2 class="title">Obiectivele mele:</h2>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Luna 1: Stăpânesc HTML, CSS, JavaScript</li>
+                        <li class="list-group-item">Luna 2: Primul meu plugin Moodle</li>
+                        <li class="list-group-item">Luna 8: Full-stack AI Developer 🚀</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-8"> <!-- Cardurile din dreapta cu zile si proiecte-->
+                <div class="card p-3 mt-3">
+                    <div class="d-flex justify-content-between">
+                        <span class="fw-semibold">Ziua 1</span>
+                        <span class="fw-semibold">04.08.2025</span>
+                    </div>
+                    <span class="text-left">Am învățat HTML și CSS basics și am făcut primul commit! ✅</span>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Capitolul 2 - Introduction to HTML
+                            <p class="fw-medim"></p><a class="link-primary link-underline-opacity-0"
                                 href=".\Udemy Projects\Anime Ranking Project\index.html">[Project]
                                 Anime
                                 Ranking</a></p>
-                    </li>
-                    <li>Capitolul 3 - Intermediate HTML
-                        <p class="project-title"><a class="link"
-                                href=".\Udemy Projects\Birthday Invite Project\index.html">[Project]
-                                Birthday
-                                Invite</a></p>
-                    </li>
-                    <li>Capitolul 5 - Introduction to CSS
-                        <p class="project-title"><a class="link"
-                                href=".\Udemy Projects\Colour Vocab Website\index.html">[Project]
-                                Colour
-                                Vocab
-                                Website</a></p>
-                    </li>
+                        </li>
+                        <li class="list-group-item">Capitolul 3 - Intermediate HTML
+                            <p class="fw-medim"><a class="link-primary link-underline-opacity-0"
+                                    href=".\Udemy Projects\Birthday Invite Project\index.html">[Project]
+                                    Birthday
+                                    Invite</a></p>
+                        </li>
+                        <li class="list-group-item">Capitolul 5 - Introduction to CSS
+                            <p class="fw-medim"><a class="link-primary link-underline-opacity-0"
+                                    href=".\Udemy Projects\Colour Vocab Website\index.html">[Project]
+                                    Colour
+                                    Vocab
+                                    Website</a></p>
+                        </li>
 
-                </ul>
-            </div>
-            <div class="card">
-                <div class="project-entry">
-                    <span class="project-title">Ziua 2</span>
-                    <span class="date">05.08.2025</span>
+                    </ul>
                 </div>
-                <span class="project-description">Astăzi am învățat CSS</span>
-                <ul>
-                    <li>Capitolul 6 - CSS Properties
-                        <p class="project-title"><a class="link"
-                                href=".\Udemy Projects\CSS Flag Project\index.html">[Project]
-                                CSS
-                                Flag
-                                Project</a></p>
-                    </li>
-                    <li>Capitolul 7 - Intermediate CSS
-                        <p class="project-title"><a class="link"
-                                href=".\Udemy Projects\Motivation Meme Project\index.html">[Project]
-                                Motivation
-                                Meme
-                                Project</a></p>
-                    </li>
-                </ul>
-            </div>
-            <div class="card">
-                <div class="project-entry">
-                    <span class="project-title">Ziua 3</span>
-                    <span class="date">06.08.2025</span>
+                <div class="card p-3 mt-3">
+                    <div class="d-flex justify-content-between">
+                        <span class="fw-semibold">Ziua 2</span>
+                        <span class="fw-semibold">05.08.2025</span>
+                    </div>
+                    <span class="text-left">Astăzi am învățat CSS</span>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Capitolul 6 - CSS Properties
+                            <p class="fw-medim"><a class="link"
+                                    href=".\Udemy Projects\CSS Flag Project\index.html">[Project]
+                                    CSS
+                                    Flag
+                                    Project</a></p>
+                        </li>
+                        <li class="list-group-item">Capitolul 7 - Intermediate CSS
+                            <p class="fw-medim"><a class="link"
+                                    href=".\Udemy Projects\Motivation Meme Project\index.html">[Project]
+                                    Motivation
+                                    Meme
+                                    Project</a></p>
+                        </li>
+                    </ul>
                 </div>
-                <span class="project-description">Astăzi am învățat Flexbox</span><br>
-                <span class="text">Proiectul de azi a fost acest redesign al paginii.</span>
+                <div class="card p-3 mt-3">
+                    <div class="d-flex justify-content-between">
+                        <span class="fw-semibold">Ziua 3</span>
+                        <span class="fw-semibold">06.08.2025</span>
+                    </div>
+                    <span class="text-left">Astăzi am învățat Flexbox/Pot sa il folosesc pentru..../</span>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Proiectul de azi a fost acest redesign al paginii.
+                            <p class="fw-medim"><a class="link" href="Udemy Projects\CSS Redesign\index.html">[Project]
+                                    CSS Redesign Project</a></p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card p-3 mt-3">
+                    <div class="d-flex justify-content-between">
+                        <span class="fw-semibold">Ziua 4</span>
+                        <span class="fw-semibold">07.08.2025</span>
+                    </div>
+                    <span class="text-left">Astăzi am învățat Grid și BootStrap/Pot sa il folosesc pentru..../</span>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Proiectul de azi a fost acest redesign al paginii utilizand
+                            BootStrap.
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

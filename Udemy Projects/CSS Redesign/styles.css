@@ -1,0 +1,89 @@
+body{
+    background-color: #f9f9f9;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+img{
+    width: 175px;
+    height: 200px;
+    border-radius: 10%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    margin: auto;
+    display: block;
+}
+.title{
+    font-weight: 700;
+    color:#111;
+    text-align: center;
+}
+.card-title{
+    font-weight: 600;
+}
+.project-title{
+    font-weight: 600;
+    text-align: left;
+}
+.project-description{
+    font-weight: 500;
+}
+.text{
+    color: #333;
+    text-align: left;
+    padding-left: 5px;
+}
+.project-entry{
+    display: flex;
+    justify-content: space-between;
+}
+.date{
+    font-weight: 600;
+    text-align: right;
+}
+a{
+    color:#007BFF;
+}
+a:hover{
+    color:#0050ff; /* modifica culoarea linkului cand e hovered */
+}
+li{
+    list-style: none;
+}
+.container{
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    max-width: 1200px;
+    flex-flow: wrap;
+    justify-content: center;
+    margin: auto;
+}
+.left-column{
+    width: 30%; /* 1/3 din pagina */
+    display: flex;
+    flex-direction: column;
+}
+.right-column{
+    width: 60%; /* 2/3 din pagina */
+    display: flex;
+    flex-direction: column;
+}
+.card{
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 1rem;
+    text-align: left;
+    padding: 1rem;
+    margin: 1rem;
+} /* cardul default */
+.card:hover{
+    box-shadow: rgba(0, 0, 0, 0.15) 3.9px 3.9px 5.2px; /* creste intensitatea umbrei cand e hovered */
+}
+@media (max-width: 768px){
+    .container{
+        flex-direction: column; /* transforma containerul in coloane pe mobil */
+        max-width: 100%;
+    }
+    .left-column, .right-column{
+        width: 100%; /* permite coloanelor sa ocupe tot width-ul pentru a nu se stacka */
+    }
+}

@@ -4,9 +4,10 @@ body{
     font-weight: 400;
 }
 img{
-    width: 50%;
-    height: 40%;
+    width: 175px;
+    height: 200px;
     border-radius: 10%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     margin: auto;
     display: block;
 }
@@ -24,7 +25,6 @@ img{
 }
 .project-description{
     font-weight: 500;
-    text-align: center;
 }
 .text{
     color: #333;
@@ -34,7 +34,6 @@ img{
 .project-entry{
     display: flex;
     justify-content: space-between;
-    padding: 10px;
 }
 .date{
     font-weight: 600;
@@ -46,9 +45,6 @@ a{
 a:hover{
     color:#0050ff; /* modifica culoarea linkului cand e hovered */
 }
-ul{
-    padding: 10;
-}
 li{
     list-style: none;
 }
@@ -58,7 +54,6 @@ li{
     flex-direction: row;
     max-width: 1200px;
     flex-flow: wrap;
-    height: 1vh;
     justify-content: center;
     margin: auto;
 }
@@ -77,14 +72,18 @@ li{
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     border-radius: 1rem;
     text-align: left;
-    padding: 5px;
-    margin: 10px;
+    padding: 1rem;
+    margin: 1rem;
 } /* cardul default */
 .card:hover{
     box-shadow: rgba(0, 0, 0, 0.15) 3.9px 3.9px 5.2px; /* creste intensitatea umbrei cand e hovered */
 }
 @media (max-width: 768px){
     .container{
-        flex-direction: column;
+        flex-direction: column; /* transforma containerul in coloane pe mobil */
+        max-width: 100%;
+    }
+    .left-column, .right-column{
+        width: 100%; /* permite coloanelor sa ocupe tot width-ul pentru a nu se stacka */
     }
 }

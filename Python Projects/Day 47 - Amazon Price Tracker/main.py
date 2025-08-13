@@ -1,6 +1,10 @@
 from email import header
+import smtplib
 from bs4 import BeautifulSoup
 import requests
+
+MY_EMAIL = ""
+MY_PASSWORD = "" 
 
 URL = "https://appbrewery.github.io/instant_pot/"
 header = {
@@ -14,6 +18,13 @@ soup = BeautifulSoup(response.content, "html.parser")
 
 price = float(soup.find(class_="a-offscreen").getText().split("$")[1])
 title = soup.find(id = "productTitle").getText().strip()
+
 if price <= 200:
-    print(f"{title} is on sale for {price}")
-    #de adaugat smtp
+    connection = smtplib.SMTP("smtp.gmail.com")
+    connection.starttls()
+    connection.login(user = MY_EMAIL, password = MY_PASSWORD)
+    connection.sendmail(from_addr = MY_EMAIL,
+                        to_addrs = MY_EMAIL,
+                        msg = f"Subject:Alerta pret!\n\nProdusul {title} este la reducere la pretul de: {price}"
+                        )
+    connection.close()

@@ -3,6 +3,9 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
+email = ""
+password = ""
+
 # Pastreaza Chrome deschis dupa finalizarea programului
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_experimental_option("detach", True)
@@ -27,8 +30,8 @@ decline_cookies_fb = driver.find_element(by=By.XPATH, value='//*[@id="facebook"]
 decline_cookies_fb.click()
 fb_email = driver.find_element(by=By.XPATH, value='//*[@id="email"]')
 fb_password = driver.find_element(by=By.XPATH, value='//*[@id="pass"]')
-fb_email.send_keys("jihem27934@ahvin.com")
-fb_password.send_keys("tinderbot1243!")
+fb_email.send_keys(email)
+fb_password.send_keys(password)
 fb_password.send_keys(Keys.ENTER)
 time.sleep(2)
 

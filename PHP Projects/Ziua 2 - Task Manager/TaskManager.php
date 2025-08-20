@@ -9,22 +9,22 @@ class TaskManager {
 
     // Conectare și creare DB/tabele
     private function connect(): void {
-        $this->db = new PDO("sqlite:" . __DIR__ . "/tasks.db");
+        $this->db = new PDO('mysql:host=localhost;dbname=task_manager;charset=utf8', 'root','');
         $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
     private function createTables(): void {
         $this->db->exec("
             CREATE TABLE IF NOT EXISTS users (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                id INT PRIMARY KEY AUTO_INCREMENT,
                 name TEXT NOT NULL,
                 email TEXT UNIQUE NOT NULL,
                 role TEXT DEFAULT 'developer'
             );
             CREATE TABLE IF NOT EXISTS tasks (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                id INT PRIMARY KEY AUTO_INCREMENT,
                 title TEXT NOT NULL,
                 description TEXT,
-                assigned_to INTEGER,
+                assigned_to INT,
                 status TEXT DEFAULT 'pending',
                 priority TEXT DEFAULT 'medium',
                 due_date TEXT,

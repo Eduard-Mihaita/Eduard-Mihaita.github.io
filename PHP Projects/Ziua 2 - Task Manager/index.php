@@ -7,9 +7,17 @@ if (empty($manager->getUsers())) {
     $manager->addUser('Edi Elev', 'edi@company.com', 'developer');
 }
 // Pentru sarcini, folosești $manager->addTask(...) etc.
+if ($_POST){
+    if (isset($_POST['add_task'])){
+        $manager->addTask($_POST['title'], $_POST['description'], $_POST['assigned_to'], $_POST['priority'], $_POST['due_date']);
+        header('Location: index.php');
+        exit;
+    }
+}
 $users = $manager->getUsers();
 $tasks = $manager->getTasks();
 ?>
+
 <!DOCTYPE html>
 <html>
 <html lang = "ro">
@@ -23,13 +31,13 @@ $tasks = $manager->getTasks();
     <div class = "card mb-3">
         <h1 class = "text-center">Task Manager</h1>
         <div class = "card-body">
-            <form method = "POST" class = "mb-3" action = "Task.php">
+            <form method = "POST" class = "mb-3">
                 <label class = "form-label">Titlu</label>
                     <input type = "text" name = "title" class = "form-control" required></input>
                 <label class = "form-label">Descriere</label>
                     <textarea name = "description" class="form-control" rows = "2" required></textarea>
                 <label class = "form-label">Atribuit catre</label>
-                    <input type = "text" name = "assigned_name" class = "form-control" required></input>
+                    <input type = "number" name = "assigned_to" class = "form-control" required></input>
                 <label class = "form-label">Prioritate</label>
                     <select name = "priority" class = "form-select" required>
                         <option value = "low">Scazuta</option>

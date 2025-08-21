@@ -18,15 +18,17 @@ class User{
         return $this->taskManager->addUser($this->name, $this->email, $this->role);
     }
 }
+
 if ($_POST && isset($_POST['add_user'])) {
     $user = new User(
         $_POST['name'],
         $_POST['email'],
         $_POST['role']
     );
-}
-if ($user->save()) {
-    header('Location: index.php');
-    exit;
+
+    if ($user->save()) {
+        header('Location: index.php');
+        exit;
+    }
 }
 ?>

@@ -26,27 +26,41 @@ class Task{
         return $this->taskManager->deleteTask($task_id);
     }
 
+    public function update(int $task_id, string $status): bool{
+        return $this->taskManager->updateTaskStatus($task_id, $status);
+    }
 }    
-if ($_POST && isset($_POST['add_task'])) {
-    $task = new Task(
+
+if ($_POST){
+    if (isset($_POST['add_task'])){
+        $task = new Task(
         $_POST['title'],
         $_POST['description'],
         $_POST['assigned_to'],
         $_POST['priority'],
         $_POST['due_date']
-    );
-    if ($task->save()) {
-        header('Location: index.php');
-        exit;
+        );
+        if ($task->save()) {
+            header('Location: index.php');
+            exit;
+    }
+    }
+    if (isset($_POST['delete_task'])){
+        $task = new Task('', '');
+        $task_id = (int)$_POST['task_id'];
+        if ($task->delete($task_id)) {
+            header('Location: index.php');
+            exit;
+    }
+    }
+    if (isset($_POST['update_task'])){
+        $task = new Task('', '');
+        $task_id = (int)$_POST['task_id'];
+        $status = $_POST['status'];
+        if ($task->update($task_id, $status)) {
+            header('Location: index.php');
+            exit;
+        }
     }
 }
-if ($_POST && isset($_POST['delete_task'])) {
-    $task = new Task('', '');
-    $task_id = (int)$_POST['task_id'];
-    if ($task->delete($task_id)) {
-        header('Location: index.php');
-        exit;
-    }
-}
-
 ?>
